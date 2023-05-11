@@ -1,4 +1,5 @@
 export const LIST_OPTIONS: { value: number; label: string }[] = [
+  { value: 0, label: "Todos" },
   { value: 1, label: "Temperatura" },
   { value: 2, label: "Umidade" },
   { value: 3, label: "Velocidade do vento" },

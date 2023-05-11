@@ -7,16 +7,13 @@ import * as React from "react";
 import { LIST_OPTIONS } from "../../constants/list.options.select";
 
 interface IBasicSelect {
-  selected: string;
-  setSelected: (data: string) => void;
+  selected: number;
+  setSelected: (data: number) => void;
 }
 
-const BasicSelect: React.FC<IBasicSelect> = ({
-  selected = "",
-  setSelected,
-}) => {
+const BasicSelect: React.FC<IBasicSelect> = ({ selected = 0, setSelected }) => {
   const handleChange = (event: SelectChangeEvent) => {
-    setSelected(event.target.value as string);
+    setSelected(+event.target.value);
   };
 
   return (

@@ -7,7 +7,7 @@ import Chart from "../chart";
 import { CHART } from "../../constants/chart";
 
 const Header: React.FC = () => {
-  const [item, setItem] = useState("");
+  const [item, setItem] = useState(0);
 
   return (
     <>
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
           </Grid>
         </Grid>
       </S.NavBar>
-      <Chart data={CHART[item.toString()]} />
+      <Chart data={CHART[item]} />
     </>
   );
 };
